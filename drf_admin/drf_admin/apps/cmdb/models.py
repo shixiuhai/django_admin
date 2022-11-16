@@ -3,7 +3,6 @@ from django.db import models
 
 from drf_admin.utils.models import BaseModel, BasePasswordModels
 
-
 class Assets(BaseModel):
     """所有资产的共有数据表"""
 

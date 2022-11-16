@@ -24,6 +24,7 @@ class UserLoginView(ObtainJSONWebToken):
 
     用户登录, status: 200(成功), return: Token信息
     """
+    
     throttle_classes = [AnonRateThrottle]
 
     def post(self, request, *args, **kwargs):
