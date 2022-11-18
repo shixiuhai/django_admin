@@ -39,6 +39,8 @@ schema_view = get_schema_view(
 base_api = settings.BASE_API
 
 urlpatterns = [
+    # testView页面
+    path(f'{base_api}test/',include('testView.urls')),
     # admin管理页面
     path('admin/', admin.site.urls),
 

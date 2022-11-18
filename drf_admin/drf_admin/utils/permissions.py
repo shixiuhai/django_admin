@@ -42,6 +42,8 @@ class RbacPermission(BasePermission):
         # 如果请求url在白名单，放行
         for safe_url in settings.WHITE_LIST:
             if re.match(settings.REGEX_URL.format(url=safe_url), request_url):
+                print(request_url)
+                print('----')
                 return True
         # admin权限放行
         conn = get_redis_connection('user_info')
